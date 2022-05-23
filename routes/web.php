@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Models\Marca;
 use App\Models\Categoria;
+use App\Http\Controllers\ProductoController;
 
 
 /*
@@ -67,3 +68,5 @@ Route::get('prueba' , function(){
                 ->with('categorias', $Categoria)
                 ->with('marca', $Marca);
 }); 
+//Route REST
+Route::resource('productos', ProductoController::class);
